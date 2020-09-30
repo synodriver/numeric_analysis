@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/fsolve.h
+math.h
+-
+stdio.h
+-
+
+F:/jhc/numeric_analyze/src/fsolve.c
+fsolve.h
+F:/jhc/numeric_analyze/src/fsolve.h
+
