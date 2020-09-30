@@ -3,6 +3,7 @@
 #include "fsolve.h"
 double function(double x)
 {
+    printf("µ÷ÓÃ %lf\n",x);
     return pow(x, 3) - x - 1;
 }
 int main()

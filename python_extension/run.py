@@ -1,5 +1,7 @@
 from fsolve import fsolve
 
+i = 1
+
 
 def py_func(x: float) -> float:
     """
@@ -8,7 +10,12 @@ def py_func(x: float) -> float:
     :param x:
     :return:
     """
+    global i
+    print("判断 {0} 第{1}次数".format(x, i))
+    i += 1
     return x ** 3 - x - 1
 
 
-print(fsolve(py_func, 1, 2, 0.00005))
+# 改进前93次调用func
+# 改进后39
+print(fsolve(py_func, 0, 20, 0.00005))
