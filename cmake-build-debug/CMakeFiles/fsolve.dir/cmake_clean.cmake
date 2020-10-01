@@ -3,7 +3,7 @@ file(REMOVE_RECURSE
   "../lib/fsolve.dll.manifest"
   "../lib/fsolve.lib"
   "../lib/fsolve.pdb"
-  "CMakeFiles/fsolve.dir/src/_fsolve.c.obj"
+  "CMakeFiles/fsolve.dir/src/fsolve.c.obj"
 )
 
 # Per-language clean rules from dependency scanning.

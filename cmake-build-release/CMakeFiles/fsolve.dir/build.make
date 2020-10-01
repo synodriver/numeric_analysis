@@ -61,33 +61,33 @@ include CMakeFiles\fsolve.dir\progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles\fsolve.dir\flags.make
 
-CMakeFiles\fsolve.dir\src\_fsolve.c.obj: CMakeFiles\fsolve.dir\flags.make
-CMakeFiles\fsolve.dir\src\_fsolve.c.obj: ..\src\_fsolve.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\jhc\numeric_analyze\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/fsolve.dir/src/_fsolve.c.obj"
+CMakeFiles\fsolve.dir\src\fsolve.c.obj: CMakeFiles\fsolve.dir\flags.make
+CMakeFiles\fsolve.dir\src\fsolve.c.obj: ..\src\fsolve.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\jhc\numeric_analyze\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/fsolve.dir/src/fsolve.c.obj"
 	F:\vs2017\VC\Tools\MSVC\14.16.27023\bin\Hostx64\x64\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\fsolve.dir\src\_fsolve.c.obj /FdCMakeFiles\fsolve.dir\ /FS -c F:\jhc\numeric_analyze\src\_fsolve.c
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\fsolve.dir\src\fsolve.c.obj /FdCMakeFiles\fsolve.dir\ /FS -c F:\jhc\numeric_analyze\src\fsolve.c
 <<
 
-CMakeFiles\fsolve.dir\src\_fsolve.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fsolve.dir/src/_fsolve.c.i"
-	F:\vs2017\VC\Tools\MSVC\14.16.27023\bin\Hostx64\x64\cl.exe > CMakeFiles\fsolve.dir\src\_fsolve.c.i @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E F:\jhc\numeric_analyze\src\_fsolve.c
+CMakeFiles\fsolve.dir\src\fsolve.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fsolve.dir/src/fsolve.c.i"
+	F:\vs2017\VC\Tools\MSVC\14.16.27023\bin\Hostx64\x64\cl.exe > CMakeFiles\fsolve.dir\src\fsolve.c.i @<<
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E F:\jhc\numeric_analyze\src\fsolve.c
 <<
 
-CMakeFiles\fsolve.dir\src\_fsolve.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fsolve.dir/src/_fsolve.c.s"
+CMakeFiles\fsolve.dir\src\fsolve.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fsolve.dir/src/fsolve.c.s"
 	F:\vs2017\VC\Tools\MSVC\14.16.27023\bin\Hostx64\x64\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\fsolve.dir\src\_fsolve.c.s /c F:\jhc\numeric_analyze\src\_fsolve.c
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\fsolve.dir\src\fsolve.c.s /c F:\jhc\numeric_analyze\src\fsolve.c
 <<
 
 # Object files for target fsolve
 fsolve_OBJECTS = \
-"CMakeFiles\fsolve.dir\src\_fsolve.c.obj"
+"CMakeFiles\fsolve.dir\src\fsolve.c.obj"
 
 # External object files for target fsolve
 fsolve_EXTERNAL_OBJECTS =
 
-..\lib\fsolve.dll: CMakeFiles\fsolve.dir\src\_fsolve.c.obj
+..\lib\fsolve.dll: CMakeFiles\fsolve.dir\src\fsolve.c.obj
 ..\lib\fsolve.dll: CMakeFiles\fsolve.dir\build.make
 ..\lib\fsolve.dll: CMakeFiles\fsolve.dir\objects1.rsp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=F:\jhc\numeric_analyze\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C shared library ..\lib\fsolve.dll"

@@ -1,7 +1,12 @@
 import ctypes
 
+i = 1
+
 
 def py_func(x: float) -> float:
+    global i
+    print("判断 {0} 第{1}次数".format(x, i))
+    i += 1
     return x ** 3 - x - 1
 
 
@@ -17,5 +22,5 @@ libc.fsolve.argtypes = [CFUNC, ctypes.c_double, ctypes.c_double, ctypes.c_double
 libc.fsolve.restype = ctypes.c_double
 # 以上根据stackoverflow自己感悟的 猜测他有argtypes就有restype 果然绝了 看这个文件 E:\Anaconda3\Lib\ctypes\__init__.py
 # def CFUNCTYPE(restype, *argtypes, **kw):
-data = libc.fsolve(cfunc, 1, 2, 0.00005)
+data = libc.fsolve(cfunc, 0, 20, 0.00005)
 print(data)

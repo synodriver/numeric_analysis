@@ -1,4 +1,4 @@
-from fsolve import fsolve
+from fsolve import *
 
 i = 1
 
@@ -16,6 +16,11 @@ def py_func(x: float) -> float:
     return x ** 3 - x - 1
 
 
+def iter_func(x):
+    return (x + 1) ** (1 / 3)
+
+
 # 改进前93次调用func
-# 改进后39
-print(fsolve(py_func, 0, 20, 0.00005))
+# 改进后40
+# print(fsolve(py_func, 0, 20, 0.00005))
+print(iterate_solve(iter_func, 1.5, 0.000005))

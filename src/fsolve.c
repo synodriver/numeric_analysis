@@ -28,6 +28,26 @@ double fsolve(Func func, double a0, double b0, double s)
             x0 = (a0 + b0) / 2;
         }
 
-    } while (fabs(temp_x0) > s);
+    }
+    while (fabs(temp_x0) > s);
     return x0;
+}
+
+double iterate_solve(Func func, double x0, double s)
+{
+    double x1;  // k+1´ÎµÄÖµ
+    while (1)
+    {
+        x1 = func(x0);
+        if (fabs(x1 - x0) < s)
+        {
+            break;
+        }
+        else
+        {
+            x0 = x1;
+        }
+
+    }
+    return x1;
 }

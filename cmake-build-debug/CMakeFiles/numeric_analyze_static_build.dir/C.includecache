@@ -6,21 +6,21 @@
 
 #IncludeRegexTransform: 
 
-F:/jhc/numeric_analyze/include/fsolve.h
+../include/fsolve.h
 math.h
 -
 stdio.h
 -
 
 F:/jhc/numeric_analyze/src/fsolve.c
-../include/fsolve.h
-F:/jhc/numeric_analyze/include/fsolve.h
+fsolve.h
+F:/jhc/numeric_analyze/src/fsolve.h
 
 F:/jhc/numeric_analyze/src/main.c
 stdio.h
 -
 math.h
 -
-../include/fsolve.h
-F:/jhc/numeric_analyze/include/fsolve.h
+fsolve.h
+F:/jhc/numeric_analyze/src/fsolve.h
 

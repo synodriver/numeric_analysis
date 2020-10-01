@@ -1102,6 +1102,7 @@ static const char __pyx_k_f[] = "f";
 static const char __pyx_k_s[] = "s";
 static const char __pyx_k_a0[] = "a0";
 static const char __pyx_k_b0[] = "b0";
+static const char __pyx_k_x0[] = "x0";
 static const char __pyx_k_main[] = "__main__";
 static const char __pyx_k_name[] = "__name__";
 static const char __pyx_k_test[] = "__test__";
@@ -1114,11 +1115,13 @@ static PyObject *__pyx_n_s_main;
 static PyObject *__pyx_n_s_name;
 static PyObject *__pyx_n_s_s;
 static PyObject *__pyx_n_s_test;
+static PyObject *__pyx_n_s_x0;
 static PyObject *__pyx_pf_6fsolve_fsolve(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_f, double __pyx_v_a0, double __pyx_v_b0, double __pyx_v_s); /* proto */
+static PyObject *__pyx_pf_6fsolve_2iterate_solve(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_f, double __pyx_v_x0, double __pyx_v_s); /* proto */
 /* Late includes */
 
-/* "fsolve.pyx":3
- * from fsolve cimport fsolve as _fsolve
+/* "fsolve.pyx":5
+ * 
  * 
  * cdef double callback(double c,void* f):             # <<<<<<<<<<<<<<
  *     return (<object>f)(c)
@@ -1138,14 +1141,14 @@ static double __pyx_f_6fsolve_callback(double __pyx_v_c, void *__pyx_v_f) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("callback", 0);
 
-  /* "fsolve.pyx":4
+  /* "fsolve.pyx":6
  * 
  * cdef double callback(double c,void* f):
  *     return (<object>f)(c)             # <<<<<<<<<<<<<<
  * 
  * def fsolve(f,double a0:float,double b0:float,double s:float)->float:
  */
-  __pyx_t_2 = PyFloat_FromDouble(__pyx_v_c); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 4, __pyx_L1_error)
+  __pyx_t_2 = PyFloat_FromDouble(__pyx_v_c); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 6, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_INCREF(((PyObject *)__pyx_v_f));
   __pyx_t_3 = ((PyObject *)__pyx_v_f); __pyx_t_4 = NULL;
@@ -1161,16 +1164,16 @@ static double __pyx_f_6fsolve_callback(double __pyx_v_c, void *__pyx_v_f) {
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_4, __pyx_t_2) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 4, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 6, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_5 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 4, __pyx_L1_error)
+  __pyx_t_5 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 6, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_r = __pyx_t_5;
   goto __pyx_L0;
 
-  /* "fsolve.pyx":3
- * from fsolve cimport fsolve as _fsolve
+  /* "fsolve.pyx":5
+ * 
  * 
  * cdef double callback(double c,void* f):             # <<<<<<<<<<<<<<
  *     return (<object>f)(c)
@@ -1190,7 +1193,7 @@ static double __pyx_f_6fsolve_callback(double __pyx_v_c, void *__pyx_v_f) {
   return __pyx_r;
 }
 
-/* "fsolve.pyx":6
+/* "fsolve.pyx":8
  *     return (<object>f)(c)
  * 
  * def fsolve(f,double a0:float,double b0:float,double s:float)->float:             # <<<<<<<<<<<<<<
@@ -1239,23 +1242,23 @@ static PyObject *__pyx_pw_6fsolve_1fsolve(PyObject *__pyx_self, PyObject *__pyx_
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_a0)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("fsolve", 1, 4, 4, 1); __PYX_ERR(0, 6, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("fsolve", 1, 4, 4, 1); __PYX_ERR(0, 8, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_b0)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("fsolve", 1, 4, 4, 2); __PYX_ERR(0, 6, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("fsolve", 1, 4, 4, 2); __PYX_ERR(0, 8, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_s)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("fsolve", 1, 4, 4, 3); __PYX_ERR(0, 6, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("fsolve", 1, 4, 4, 3); __PYX_ERR(0, 8, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "fsolve") < 0)) __PYX_ERR(0, 6, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "fsolve") < 0)) __PYX_ERR(0, 8, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 4) {
       goto __pyx_L5_argtuple_error;
@@ -1266,13 +1269,13 @@ static PyObject *__pyx_pw_6fsolve_1fsolve(PyObject *__pyx_self, PyObject *__pyx_
       values[3] = PyTuple_GET_ITEM(__pyx_args, 3);
     }
     __pyx_v_f = values[0];
-    __pyx_v_a0 = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_a0 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 6, __pyx_L3_error)
-    __pyx_v_b0 = __pyx_PyFloat_AsDouble(values[2]); if (unlikely((__pyx_v_b0 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 6, __pyx_L3_error)
-    __pyx_v_s = __pyx_PyFloat_AsDouble(values[3]); if (unlikely((__pyx_v_s == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 6, __pyx_L3_error)
+    __pyx_v_a0 = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_a0 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 8, __pyx_L3_error)
+    __pyx_v_b0 = __pyx_PyFloat_AsDouble(values[2]); if (unlikely((__pyx_v_b0 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 8, __pyx_L3_error)
+    __pyx_v_s = __pyx_PyFloat_AsDouble(values[3]); if (unlikely((__pyx_v_s == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 8, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("fsolve", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 6, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("fsolve", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 8, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("fsolve.fsolve", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -1294,19 +1297,21 @@ static PyObject *__pyx_pf_6fsolve_fsolve(CYTHON_UNUSED PyObject *__pyx_self, PyO
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("fsolve", 0);
 
-  /* "fsolve.pyx":10
+  /* "fsolve.pyx":12
  *     f,a0,b0,a0<b0,s
  *     """
  *     return _fsolve(callback,a0,b0,s,<void*>f)             # <<<<<<<<<<<<<<
+ * 
+ * def iterate_solve(f,double x0,double s)->float:
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(fsolve(__pyx_f_6fsolve_callback, __pyx_v_a0, __pyx_v_b0, __pyx_v_s, ((void *)__pyx_v_f))); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 10, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(fsolve(__pyx_f_6fsolve_callback, __pyx_v_a0, __pyx_v_b0, __pyx_v_s, ((void *)__pyx_v_f))); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 12, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "fsolve.pyx":6
+  /* "fsolve.pyx":8
  *     return (<object>f)(c)
  * 
  * def fsolve(f,double a0:float,double b0:float,double s:float)->float:             # <<<<<<<<<<<<<<
@@ -1325,8 +1330,133 @@ static PyObject *__pyx_pf_6fsolve_fsolve(CYTHON_UNUSED PyObject *__pyx_self, PyO
   return __pyx_r;
 }
 
+/* "fsolve.pyx":14
+ *     return _fsolve(callback,a0,b0,s,<void*>f)
+ * 
+ * def iterate_solve(f,double x0,double s)->float:             # <<<<<<<<<<<<<<
+ *     """
+ *         f,x0,s
+ */
+
+/* Python wrapper */
+static PyObject *__pyx_pw_6fsolve_3iterate_solve(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6fsolve_2iterate_solve[] = "\n        f\346\230\257\350\277\255\344\273\243\346\226\271\347\250\213,x0\346\230\257\350\277\255\344\273\243\345\210\235\345\247\213\345\200\274,s\346\230\257\345\205\201\350\256\270\350\257\257\345\267\256\n    ";
+static PyObject *__pyx_pw_6fsolve_3iterate_solve(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+  PyObject *__pyx_v_f = 0;
+  double __pyx_v_x0;
+  double __pyx_v_s;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("iterate_solve (wrapper)", 0);
+  {
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_f,&__pyx_n_s_x0,&__pyx_n_s_s,0};
+    PyObject* values[3] = {0,0,0};
+    if (unlikely(__pyx_kwds)) {
+      Py_ssize_t kw_args;
+      const Py_ssize_t pos_args = PyTuple_GET_SIZE(__pyx_args);
+      switch (pos_args) {
+        case  3: values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
+        CYTHON_FALLTHROUGH;
+        case  2: values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
+        CYTHON_FALLTHROUGH;
+        case  1: values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
+        CYTHON_FALLTHROUGH;
+        case  0: break;
+        default: goto __pyx_L5_argtuple_error;
+      }
+      kw_args = PyDict_Size(__pyx_kwds);
+      switch (pos_args) {
+        case  0:
+        if (likely((values[0] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_f)) != 0)) kw_args--;
+        else goto __pyx_L5_argtuple_error;
+        CYTHON_FALLTHROUGH;
+        case  1:
+        if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_x0)) != 0)) kw_args--;
+        else {
+          __Pyx_RaiseArgtupleInvalid("iterate_solve", 1, 3, 3, 1); __PYX_ERR(0, 14, __pyx_L3_error)
+        }
+        CYTHON_FALLTHROUGH;
+        case  2:
+        if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_s)) != 0)) kw_args--;
+        else {
+          __Pyx_RaiseArgtupleInvalid("iterate_solve", 1, 3, 3, 2); __PYX_ERR(0, 14, __pyx_L3_error)
+        }
+      }
+      if (unlikely(kw_args > 0)) {
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "iterate_solve") < 0)) __PYX_ERR(0, 14, __pyx_L3_error)
+      }
+    } else if (PyTuple_GET_SIZE(__pyx_args) != 3) {
+      goto __pyx_L5_argtuple_error;
+    } else {
+      values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
+      values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
+      values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
+    }
+    __pyx_v_f = values[0];
+    __pyx_v_x0 = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_x0 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 14, __pyx_L3_error)
+    __pyx_v_s = __pyx_PyFloat_AsDouble(values[2]); if (unlikely((__pyx_v_s == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 14, __pyx_L3_error)
+  }
+  goto __pyx_L4_argument_unpacking_done;
+  __pyx_L5_argtuple_error:;
+  __Pyx_RaiseArgtupleInvalid("iterate_solve", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 14, __pyx_L3_error)
+  __pyx_L3_error:;
+  __Pyx_AddTraceback("fsolve.iterate_solve", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_RefNannyFinishContext();
+  return NULL;
+  __pyx_L4_argument_unpacking_done:;
+  __pyx_r = __pyx_pf_6fsolve_2iterate_solve(__pyx_self, __pyx_v_f, __pyx_v_x0, __pyx_v_s);
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_6fsolve_2iterate_solve(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_f, double __pyx_v_x0, double __pyx_v_s) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("iterate_solve", 0);
+
+  /* "fsolve.pyx":18
+ *         f,x0,s
+ *     """
+ *     return _iterate_solve(callback,x0,s,<void*>f)             # <<<<<<<<<<<<<<
+ */
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_1 = PyFloat_FromDouble(iterate_solve(__pyx_f_6fsolve_callback, __pyx_v_x0, __pyx_v_s, ((void *)__pyx_v_f))); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 18, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
+  /* "fsolve.pyx":14
+ *     return _fsolve(callback,a0,b0,s,<void*>f)
+ * 
+ * def iterate_solve(f,double x0,double s)->float:             # <<<<<<<<<<<<<<
+ *     """
+ *         f,x0,s
+ */
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("fsolve.iterate_solve", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
 static PyMethodDef __pyx_methods[] = {
   {"fsolve", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6fsolve_1fsolve, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6fsolve_fsolve},
+  {"iterate_solve", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6fsolve_3iterate_solve, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6fsolve_2iterate_solve},
   {0, 0, 0, 0}
 };
 
@@ -1380,6 +1510,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_name, __pyx_k_name, sizeof(__pyx_k_name), 0, 0, 1, 1},
   {&__pyx_n_s_s, __pyx_k_s, sizeof(__pyx_k_s), 0, 0, 1, 1},
   {&__pyx_n_s_test, __pyx_k_test, sizeof(__pyx_k_test), 0, 0, 1, 1},
+  {&__pyx_n_s_x0, __pyx_k_x0, sizeof(__pyx_k_x0), 0, 0, 1, 1},
   {0, 0, 0, 0, 0, 0, 0}
 };
 static CYTHON_SMALL_CODE int __Pyx_InitCachedBuiltins(void) {
@@ -1668,8 +1799,8 @@ if (!__Pyx_RefNanny) {
 
   /* "fsolve.pyx":1
  * from fsolve cimport fsolve as _fsolve             # <<<<<<<<<<<<<<
+ * from fsolve cimport iterate_solve as _iterate_solve
  * 
- * cdef double callback(double c,void* f):
  */
   __pyx_t_1 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);

@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "F:/jhc/numeric_analyze/src/_fsolve.c" "F:/jhc/numeric_analyze/cmake-build-debug/CMakeFiles/fsolve.dir/src/_fsolve.c.obj"
+  "F:/jhc/numeric_analyze/src/fsolve.c" "F:/jhc/numeric_analyze/cmake-build-debug/CMakeFiles/fsolve.dir/src/fsolve.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "MSVC")
 

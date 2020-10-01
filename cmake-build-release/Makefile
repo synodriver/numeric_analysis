@@ -153,35 +153,35 @@ numeric_analyze_dynamic_build\fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\numeric_analyze_dynamic_build.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\numeric_analyze_dynamic_build.dir\build
 .PHONY : numeric_analyze_dynamic_build\fast
 
-src\_fsolve.obj: src\_fsolve.c.obj
+src\fsolve.obj: src\fsolve.c.obj
 
-.PHONY : src\_fsolve.obj
+.PHONY : src\fsolve.obj
 
 # target to build an object file
-src\_fsolve.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\fsolve.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\fsolve.dir\src\_fsolve.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\numeric_analyze_static_build.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\numeric_analyze_static_build.dir\src\_fsolve.c.obj
-.PHONY : src\_fsolve.c.obj
+src\fsolve.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fsolve.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\fsolve.dir\src\fsolve.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\numeric_analyze_static_build.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\numeric_analyze_static_build.dir\src\fsolve.c.obj
+.PHONY : src\fsolve.c.obj
 
-src\_fsolve.i: src\_fsolve.c.i
+src\fsolve.i: src\fsolve.c.i
 
-.PHONY : src\_fsolve.i
+.PHONY : src\fsolve.i
 
 # target to preprocess a source file
-src\_fsolve.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\fsolve.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\fsolve.dir\src\_fsolve.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\numeric_analyze_static_build.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\numeric_analyze_static_build.dir\src\_fsolve.c.i
-.PHONY : src\_fsolve.c.i
+src\fsolve.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fsolve.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\fsolve.dir\src\fsolve.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\numeric_analyze_static_build.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\numeric_analyze_static_build.dir\src\fsolve.c.i
+.PHONY : src\fsolve.c.i
 
-src\_fsolve.s: src\_fsolve.c.s
+src\fsolve.s: src\fsolve.c.s
 
-.PHONY : src\_fsolve.s
+.PHONY : src\fsolve.s
 
 # target to generate assembly for a file
-src\_fsolve.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\fsolve.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\fsolve.dir\src\_fsolve.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\numeric_analyze_static_build.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\numeric_analyze_static_build.dir\src\_fsolve.c.s
-.PHONY : src\_fsolve.c.s
+src\fsolve.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fsolve.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\fsolve.dir\src\fsolve.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\numeric_analyze_static_build.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\numeric_analyze_static_build.dir\src\fsolve.c.s
+.PHONY : src\fsolve.c.s
 
 src\main.obj: src\main.c.obj
 
@@ -224,9 +224,9 @@ help:
 	@echo ... fsolve
 	@echo ... numeric_analyze_dynamic_build
 	@echo ... numeric_analyze_static_build
-	@echo ... src/_fsolve.obj
-	@echo ... src/_fsolve.i
-	@echo ... src/_fsolve.s
+	@echo ... src/fsolve.obj
+	@echo ... src/fsolve.i
+	@echo ... src/fsolve.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s

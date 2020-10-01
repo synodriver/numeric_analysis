@@ -80,35 +80,35 @@ CMakeFiles\numeric_analyze_static_build.dir\src\main.c.s: cmake_force
  /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\numeric_analyze_static_build.dir\src\main.c.s /c F:\jhc\numeric_analyze\src\main.c
 <<
 
-CMakeFiles\numeric_analyze_static_build.dir\src\_fsolve.c.obj: CMakeFiles\numeric_analyze_static_build.dir\flags.make
-CMakeFiles\numeric_analyze_static_build.dir\src\_fsolve.c.obj: ..\src\_fsolve.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\jhc\numeric_analyze\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/numeric_analyze_static_build.dir/src/_fsolve.c.obj"
+CMakeFiles\numeric_analyze_static_build.dir\src\fsolve.c.obj: CMakeFiles\numeric_analyze_static_build.dir\flags.make
+CMakeFiles\numeric_analyze_static_build.dir\src\fsolve.c.obj: ..\src\fsolve.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\jhc\numeric_analyze\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/numeric_analyze_static_build.dir/src/fsolve.c.obj"
 	F:\vs2017\VC\Tools\MSVC\14.16.27023\bin\Hostx64\x64\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\numeric_analyze_static_build.dir\src\_fsolve.c.obj /FdCMakeFiles\numeric_analyze_static_build.dir\ /FS -c F:\jhc\numeric_analyze\src\_fsolve.c
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\numeric_analyze_static_build.dir\src\fsolve.c.obj /FdCMakeFiles\numeric_analyze_static_build.dir\ /FS -c F:\jhc\numeric_analyze\src\fsolve.c
 <<
 
-CMakeFiles\numeric_analyze_static_build.dir\src\_fsolve.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/numeric_analyze_static_build.dir/src/_fsolve.c.i"
-	F:\vs2017\VC\Tools\MSVC\14.16.27023\bin\Hostx64\x64\cl.exe > CMakeFiles\numeric_analyze_static_build.dir\src\_fsolve.c.i @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E F:\jhc\numeric_analyze\src\_fsolve.c
+CMakeFiles\numeric_analyze_static_build.dir\src\fsolve.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/numeric_analyze_static_build.dir/src/fsolve.c.i"
+	F:\vs2017\VC\Tools\MSVC\14.16.27023\bin\Hostx64\x64\cl.exe > CMakeFiles\numeric_analyze_static_build.dir\src\fsolve.c.i @<<
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E F:\jhc\numeric_analyze\src\fsolve.c
 <<
 
-CMakeFiles\numeric_analyze_static_build.dir\src\_fsolve.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/numeric_analyze_static_build.dir/src/_fsolve.c.s"
+CMakeFiles\numeric_analyze_static_build.dir\src\fsolve.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/numeric_analyze_static_build.dir/src/fsolve.c.s"
 	F:\vs2017\VC\Tools\MSVC\14.16.27023\bin\Hostx64\x64\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\numeric_analyze_static_build.dir\src\_fsolve.c.s /c F:\jhc\numeric_analyze\src\_fsolve.c
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\numeric_analyze_static_build.dir\src\fsolve.c.s /c F:\jhc\numeric_analyze\src\fsolve.c
 <<
 
 # Object files for target numeric_analyze_static_build
 numeric_analyze_static_build_OBJECTS = \
 "CMakeFiles\numeric_analyze_static_build.dir\src\main.c.obj" \
-"CMakeFiles\numeric_analyze_static_build.dir\src\_fsolve.c.obj"
+"CMakeFiles\numeric_analyze_static_build.dir\src\fsolve.c.obj"
 
 # External object files for target numeric_analyze_static_build
 numeric_analyze_static_build_EXTERNAL_OBJECTS =
 
 ..\build\numeric_analyze_static_build.exe: CMakeFiles\numeric_analyze_static_build.dir\src\main.c.obj
-..\build\numeric_analyze_static_build.exe: CMakeFiles\numeric_analyze_static_build.dir\src\_fsolve.c.obj
+..\build\numeric_analyze_static_build.exe: CMakeFiles\numeric_analyze_static_build.dir\src\fsolve.c.obj
 ..\build\numeric_analyze_static_build.exe: CMakeFiles\numeric_analyze_static_build.dir\build.make
 ..\build\numeric_analyze_static_build.exe: CMakeFiles\numeric_analyze_static_build.dir\objects1.rsp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=F:\jhc\numeric_analyze\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable ..\build\numeric_analyze_static_build.exe"
