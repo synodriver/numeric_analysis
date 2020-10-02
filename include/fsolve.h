@@ -16,5 +16,7 @@ __declspec(dllexport) double fsolve(Func func, double a0, double b0, double s); 
 // func是迭代函数 x0是给定初始值 s是限定误差
 __declspec(dllexport) double iterate_solve(Func func, double x0, double s); //迭代法
 
+//导数  其实是非分之赏  求func在x0 领域的导数 dx是微分大小
+__declspec(dllexport) double diff(Func func, double x0, double dx);
 
 #endif //NUMERIC_ANALYZE_FSOLVE_H

@@ -14,4 +14,6 @@ typedef double (*Func)(double x, void *context); // 这个context存粹是给py�
 __declspec(dllexport) double fsolve(Func func, double a0, double b0, double s, void *context);
 //前面的__declspec(dllexport)很重要，不然py找不到
 __declspec(dllexport) double iterate_solve(Func func, double x0, double s, void *context); //迭代法
+
+__declspec(dllexport) double diff(Func func, double x0, double dx,void* context);
 #endif //NUMERIC_ANALYZE_FSOLVE_H

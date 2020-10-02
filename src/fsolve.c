@@ -27,7 +27,6 @@ double fsolve(Func func, double a0, double b0, double s)
             a0 = x0;
             x0 = (a0 + b0) / 2;
         }
-
     }
     while (fabs(temp_x0) > s);
     return x0;
@@ -47,7 +46,13 @@ double iterate_solve(Func func, double x0, double s)
         {
             x0 = x1;
         }
-
     }
     return x1;
+}
+
+double diff(Func func, double x0, double dx)
+{
+    double x_left = x0 - dx / 2.0;
+    double x_right = x0 + dx / 2.0;
+    return (func(x_right)-func(x_left))/dx;
 }

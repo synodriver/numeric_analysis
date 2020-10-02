@@ -5,9 +5,23 @@ i = 1
 
 def py_func(x: float) -> float:
     global i
-    print("判断 {0} 第{1}次数".format(x, i))
+    # print("判断 {0} 第{1}次数".format(x, i))
     i += 1
     return x ** 3 - x - 1
+
+
+def iter_func(x: float) -> float:
+    """
+
+    :param x:
+    :return:
+    """
+    print("迭代 {0}".format(x))
+    return (x + 1) ** (1 / 3)
+
+
+def diff_func(x: float) -> float:
+    return x ** 2
 
 
 ctypes.cdll.msvcrt.printf("好啊我是C语言的print\n".encode("gbk"))  # 加载微软的库
@@ -24,3 +38,11 @@ libc.fsolve.restype = ctypes.c_double
 # def CFUNCTYPE(restype, *argtypes, **kw):
 data = libc.fsolve(cfunc, 0, 20, 0.00005)
 print(data)
+
+libc.iterate_solve.argtypes = [CFUNC, ctypes.c_double, ctypes.c_double]
+libc.iterate_solve.restype = ctypes.c_double
+print(libc.iterate_solve(CFUNC(iter_func), 1.5, 0.000005))
+
+libc.diff.argtypes = [CFUNC, ctypes.c_double, ctypes.c_double]
+libc.diff.restype = ctypes.c_double
+print(libc.diff(CFUNC(diff_func), 1, 0.00001))

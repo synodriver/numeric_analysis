@@ -51,3 +51,10 @@ double iterate_solve(Func func, double x0, double s, void *context)
     }
     return x1;
 }
+
+double diff(Func func, double x0, double dx, void *context)
+{
+    double x_left = x0 - dx / 2.0;
+    double x_right = x0 + dx / 2.0;
+    return (func(x_right, context) - func(x_left, context)) / dx;
+}
