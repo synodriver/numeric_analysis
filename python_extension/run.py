@@ -43,13 +43,13 @@ def iter_func(x):
 # print(fsolve(py_func, 0, 20, 0.00005))
 
 start = time.time()
-for i in range(1000000):
+for _ in range(1000000):
     iterate_solve(iter_func, 1.5, 0.000005)
 print("python build")
 print("求解1000000次 消耗时间 {0}".format(time.time() - start))  # 速度是c语言的 1/8 因为回调是py写的   c0.7 py4.10
 # print(iterate_solve(iter_func, 1.5, 0.000005))
 start = time.time()
-for i in range(1000000):
+for _ in range(1000000):
     fsolve.iterate_solve(iter_func, 1.5, 0.000005)
 print("cython build")
 print("求解1000000次 消耗时间 {0}".format(time.time() - start))
